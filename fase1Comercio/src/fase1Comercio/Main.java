@@ -31,7 +31,7 @@ public class Main {
 				comercio.removeProduct();
 			}
 			else if(opcao == 5) {
-				
+				comercio.sellProduct();
 			}
 			else if(opcao == 6) {
 
