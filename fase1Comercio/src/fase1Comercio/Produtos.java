@@ -11,4 +11,7 @@ public class Produtos {
 		this.estoque = 0;
 	}
 	
+	public String getNomeProduto () {
+		return nomeProduto;
+	}
 }

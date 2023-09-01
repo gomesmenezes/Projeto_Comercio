@@ -19,9 +19,9 @@ public class Comercio {
 			System.out.println("Não há nenhum produto cadastrado! ");
 		}
 	}
-	private Produtos verificarProduto(int codido) {
+	private Produtos verificarProduto(int codigo) {
 		for (Produtos produto : produtos) {
-			if (produto.codigos.equals(codido)) {
+			if (produto.codigos.equals(codigo)) {
 				return produto;
 			}
 		}
@@ -35,7 +35,7 @@ public class Comercio {
 		System.out.print("Digite o codigo do produto: ");
 		int codigo = Integer.parseInt(sc.nextLine());
 		for (Produtos produto : produtos) {
-			if(produto.codigos.equals(codigo)) {
+			if(produto.codigos.equals(codigo)) { ////////////////////////////////////////////////////////////////
 				while(produto.codigos.equals(codigo)) {
 					System.out.print("Código já em uso. Por favor, digite outro: ");
 					codigo = Integer.parseInt(sc.nextLine());
@@ -69,13 +69,26 @@ public class Comercio {
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void removeProduct() {
+		System.out.println("Digite o código do produto que você quer remover: ");
+		int codigo = Integer.parseInt(sc.nextLine());
+		Produtos produto = verificarProduto(codigo);
+
+		if (produto != null) { 
+			System.out.println("Tem certeza que você quer remover o produto(S/N) ");
+			String resposta = sc.nextLine();
+		
+			if (resposta.equalsIgnoreCase("S")) {
+				produtos.remove(produto);
+				System.out.println("O produto foi removido");
+			}
+			else {
+				System.out.println("O produto continua no estoque");
+			}
+		}
+	}
+
+	public void sellProduct () {
+		
+	}
 }
