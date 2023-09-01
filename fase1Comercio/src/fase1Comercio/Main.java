@@ -15,7 +15,7 @@ public class Main {
 							+ "3) Adicionar estoque de um produto\r\n"
 							+ "4) Remover um produto do comércio\r\n"
 							+ "5) Vender algum produto existente\r\n"
-							+ "6) Sair do program\n"); 
+							+ "6) Sair do programa\n"); 
 			System.out.print("Qual opcao desejada? ");
 			opcao = Integer.parseInt(sc.nextLine());
 			if (opcao == 1) {
@@ -34,7 +34,7 @@ public class Main {
 				comercio.sellProduct();
 			}
 			else if(opcao == 6) {
-
+				comercio.exitProgram();
 			}
 		}
 		sc.close();

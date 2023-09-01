@@ -119,5 +119,8 @@ public class Comercio {
     } 
 	}
 
+	public void exitProgram() {
+		System.out.println("Saindo do programa...");
+	}
 
 }
